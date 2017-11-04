@@ -26,7 +26,13 @@ public class Utils {
         for (int i=0;i<imagesUrl.length;i++){
             BannerImageModel imageModel=new BannerImageModel();
             imageModel.setImgUrl(imagesUrl[i]);
+            imageModel.setWebP(true);
             datas.add(imageModel);
+
+            BannerImageModel normal=new BannerImageModel();
+            normal.setImgUrl(imagesUrl[i]);
+            normal.setWebP(false);
+            datas.add(normal);
         }
         return datas;
     }

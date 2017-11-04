@@ -25,13 +25,13 @@
             android:id="@+id/btnWebp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="使用webP加载图片数据 "/>
+            android:text="两者比较 "/>
 
-        <Button
-            android:id="@+id/btnNormal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="使用正常图片加载"/>
+        <!--<Button-->
+            <!--android:id="@+id/btnNormal"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="使用正常图片加载"/>-->
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

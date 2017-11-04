@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -18,9 +19,8 @@ import webp.ff.com.webpalioss.widget.FFImageView;
 public class BannerImageAdapter extends FFBaseAdapter<BannerImageModel> {
 
 
+    private boolean isUseWeb = false;
 
-
-    private boolean isUseWeb=false;
     /**
      * @param data    用于展示的列表数据
      * @param context 传入的上下文
@@ -43,28 +43,36 @@ public class BannerImageAdapter extends FFBaseAdapter<BannerImageModel> {
             convertView = LayoutInflater.from(mContext).inflate(R.layout.banner_image_item_layout, null);
             convertView.setTag(new ViewHolder(convertView));
         }
-        initializeViews((BannerImageModel)getItem(position), (ViewHolder) convertView.getTag());
+        initializeViews((BannerImageModel) getItem(position), (ViewHolder) convertView.getTag());
         return convertView;
     }
 
     /**
      * 初始化相关数据
+     *
      * @param object
      * @param holder
      */
     private void initializeViews(BannerImageModel object, ViewHolder holder) {
         //TODO implement
-        if (isUseWeb){
+
+        if (object.isWebP()) {
             holder.ivContent.setImgUrlWebP(object.getImgUrl());
-        }else {
+            holder.tvFlag.setVisibility(View.VISIBLE);
+        } else {
             holder.ivContent.setImgUrlNormal(object.getImgUrl());
+            holder.tvFlag.setVisibility(View.GONE);
         }
     }
 
     protected class ViewHolder {
         private FFImageView ivContent;
+
+        private TextView tvFlag;
+
         public ViewHolder(View view) {
             ivContent = (FFImageView) view.findViewById(R.id.iv_content);
+            tvFlag=(TextView)view.findViewById(R.id.tvFlag);
         }
     }
 

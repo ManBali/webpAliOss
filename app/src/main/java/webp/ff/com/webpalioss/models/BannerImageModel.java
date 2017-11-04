@@ -16,4 +16,14 @@ public class BannerImageModel {
     }
 
     private String imgUrl="";
+
+    private boolean isWebP=false;
+
+    public boolean isWebP() {
+        return isWebP;
+    }
+
+    public void setWebP(boolean webP) {
+        isWebP = webP;
+    }
 }

@@ -8,4 +8,10 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:scaleType="centerCrop"/>
+    <TextView
+        android:id="@+id/tvFlag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="WebP"
+        android:visibility="gone"/>
 </RelativeLayout>

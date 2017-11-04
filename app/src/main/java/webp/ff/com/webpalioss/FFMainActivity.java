@@ -1,11 +1,10 @@
 package webp.ff.com.webpalioss;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import webp.ff.com.webpalioss.ui.FFNormalImageLoaderAct;
 import webp.ff.com.webpalioss.ui.FFWebPImageLoaderAct;
 
 public class FFMainActivity extends AppCompatActivity {
@@ -26,13 +25,13 @@ public class FFMainActivity extends AppCompatActivity {
         });
 
 
-        findViewById(R.id.btnNormal).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent();
-                intent.setClass(FFMainActivity.this, FFNormalImageLoaderAct.class);
-                startActivity(intent);
-            }
-        });
+//        findViewById(R.id.btnNormal).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent=new Intent();
+//                intent.setClass(FFMainActivity.this, FFNormalImageLoaderAct.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 }
